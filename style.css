@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+.board {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #ddd;
+}
+.column {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1%;
+    color: #3f3f3f;
+    border: 1px solid #1e1e1e;
+}
+
+/* Specific background colors for each column */
+#backlog {
+    background-color: #f48897; /* Dark gray for Backlog */
+}
+
+#doing {
+    background-color: #f4e688; /* Blue for Doing */
+}
+
+#review {
+    background-color: #88f48e; /* Orange for Review */
+}
+
+#done {
+    background-color: #88e2f4; /* Green for Done */
+}
+.items {
+    min-height: 100px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px dashed #303030;
+    border-radius: 5px;
+}
+.item {
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #444;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+.add-item-form {
+    margin: 20px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.dragging {
+    opacity: 0.5;
+    border: 2px dashed #888;
+}
+
+#addItemForm input, #addItemForm textarea, #addItemForm select, #addItemForm button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 80%;
+    max-width: 300px;
+    background-color: #444;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+
+#addItemForm button {
+    background-color: #555;
+    color: #f5f5f5;
+    border: 1px solid #666;
+    cursor: pointer;
+}
+
+#addItemForm button:hover {
+    background-color: #666;
+}
+
+/* MODAL WINDOW STYLE */
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #2c2c2c;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

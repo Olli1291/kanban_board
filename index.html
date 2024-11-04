@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kanban Board</h1>
+
+    <div class="add-item-form">
+        <h2>Add New Task</h2>
+        <form id="addItemForm">
+            <input type="text" id="title" name="title" placeholder="Task Title" required>
+            <textarea id="description" name="description" placeholder="Task Description"></textarea>
+            <select id="status" name="status" required>
+                <option value="backlog">Backlog</option>
+                <option value="doing">Doing</option>
+                <option value="review">Review</option>
+                <option value="done">Done</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+
+    <div class="board">
+        <div class="column" id="backlog" data-status="backlog">
+            <h2>Backlog</h2>
+            <div class="items"></div>
+        </div>
+        <div class="column" id="doing" data-status="doing">
+            <h2>Doing</h2>
+            <div class="items"></div>
+        </div>
+        <div class="column" id="review" data-status="review">
+            <h2>Review</h2>
+            <div class="items"></div>
+        </div>
+        <div class="column" id="done" data-status="done">
+            <h2>Done</h2>
+            <div class="items"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Edit Task</h2>
+            <form id="editItemForm">
+                <input type="text" id="editTitle" placeholder="Task Title" required>
+                <textarea id="editDescription" placeholder="Task Description"></textarea>
+                <select id="editStatus" required>
+                    <option value="backlog">Backlog</option>
+                    <option value="doing">Doing</option>
+                    <option value="review">Review</option>
+                    <option value="done">Done</option>
+                </select>
+                <button type="submit">Update Task</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
